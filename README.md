@@ -33,14 +33,16 @@ The main.py file is used to execute the algorithm and adjust its hyperparameters
 
 ### Kernel configuration for cost function 
 ```kernel```: specify the kernel as 'linear', 'gaussian' or 'laplace'
+
 ```bandwidth```: specify bandwith heuristic for the respective kernel as 'median', 'sig_std' ,or 'sig_std_batch_max'
 
 ### Penalty heuristic configuration
 ```pen-heur```: 'cost' for cost-heuristic introduced and described in section 4.2 of [1], or 'slope' for slope heuristic described in [3]
 ```alpha```: regularising penalty-factor. For adequate choice refer to [1]
+
 ```n_cp_max```: maximum number of change-points considered
-```D_max```: hyperparameter for slope-heuristic (compare [3])
-```D_min```: hyperparameter for slope-heuristic (compare [3])
+```D_min/D_max```: hyperparameter for slope-heuristic (compare [3])
+
 
 ## Run the script
 When you run the script, the initially selected signal is displayed as shown in the following pictures:
