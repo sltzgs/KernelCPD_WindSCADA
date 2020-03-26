@@ -5,6 +5,8 @@ essed SCADA signals. It complements comprehension of the paper and allows reprod
 
 If you would like to get in touch, please contact simon.letzgus@tu-berlin.de.
 
+[![DOI](https://zenodo.org/badge/248196713.svg)](https://zenodo.org/badge/latestdoi/248196713)
+
 
 ## Repo content
 The repo is structured as follows:
