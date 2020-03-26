@@ -30,7 +30,49 @@ Get started by navigating to your target directory. In the main.py-file you can 
 
 ### The main.py step-by-step
 
-After importing the required library-packages, the Data-import section loads and unpickles the ```data_sample.pkl``` file. Via the variable ```id_signal``` one of the exemplary signals can be selected (see [data](#Data))
+After importing the required library-packages, the Data-import section loads and unpickles the ```data_sample.pkl``` file. Via the variable ```id_signal``` one of the exemplary signals can be selected (see [Data](#Data))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Data (#Data)
 The ```data_samples.pkl``` in the src-folder contains a selection of 11 pre-processed SCADA signals. The pre-processing procedure is described in detail [1], section 4.1. The signals represent all examplary cases used in [1] for visualising the algorithm's performance. The ```.pkl```file contains a ```data_samples```-object which holds the SCADA signals and additional information for each siganl, both as ```pd.DataFrames```. Namely, the following signals are included:
