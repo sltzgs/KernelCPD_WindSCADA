@@ -10,7 +10,7 @@ Analysis of data from wind turbine supervisory control and data acquisition (SCA
 
 ## Getting Started
 
-### Repo content explained
+### Repo content
 The repo is structured as follows:
 - src: folder contains all code files
 	- main.py:		 main file that allows to run the complete algorithm and adjustments of its hyperparameters.
@@ -18,6 +18,8 @@ The repo is structured as follows:
 	- penalty_heuristics.py: file contains implementation of slope-heuristic as described in [2] and the cost-heuristic [1].
 	- plot_cp:		 file contains function for visualising the cp-detection results.
 - figures: folder contains exemplary plots for illustration
+- requirements.txt: package requirements
+- LICENSE: license information
 
 ### Installing
 
@@ -26,7 +28,11 @@ This code is written in ```Python 3.7``` and requires the packages listed in ```
 
 Get started by navigating to your target directory. In the main.py-file you can chose the signal to be analysed as well as the hyperparameters of the algorithm. Execute the main.py-file to run the algorithm with the respective settings.
 
-### Data
+### The main.py step-by-step
+
+After importing the required library-packages, the Data-import section loads and unpickles the ```data_sample.pkl``` file. Via the variable ```id_signal``` one of the exemplary signals can be selected (see [data])
+
+### Data [data](#data)
 The ```data_samples.pkl``` in the src-folder contains a selection of 11 pre-processed SCADA signals. The pre-processing procedure is described in detail [1], section 4.1. The signals represent all examplary cases used in [1] for visualising the algorithm's performance. The ```.pkl```file contains a ```data_samples```-object which holds the SCADA signals and additional information for each siganl, both as ```pd.DataFrames```. Namely, the following signals are included:
 
 | Signal ID | Turbine ID | Signal name | CP present | Figure |
@@ -42,11 +48,6 @@ The ```data_samples.pkl``` in the src-folder contains a selection of 11 pre-proc
 | 8 | I | Pitch Motor Temperature | yes (6) | 11 |
 | 9 | I |Gear Oil Pressure | yes (1) | 8 |
 | 10 | J | Gear Bearing Temperature | yes (1) | 11 |
-
-### The main.py step-by-step
-
-Explain how to run the automated tests for this system
-
 
 ## Result visualisation
 
