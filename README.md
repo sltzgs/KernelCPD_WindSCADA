@@ -14,7 +14,7 @@ The repo is structured as follows:
 	- penalty_heuristics.py: file contains implementation of slope-heuristic as described in [3] and the cost-heuristic [1].
 	- plot_cp:		 file contains function for visualising the cp-detection results.
 - figures: folder contains exemplary plots for illustration
-- requirements.txt: package requirements
+- requirements: txt-file listing package requirements
 - LICENSE: license information
 
 ## Installing
@@ -28,8 +28,9 @@ Get started by navigating to your target directory. In the main.py-file you can 
 The main.py file is used to execute the algorithm and adjust its hyperparameters. All adjustable hyperparameter can be found in the ```dct_conf``` dictionary. For further explanations of the algorithm refer to [1]. The following options are given:
 
 ### Data intake settings:
-```load_sample_data_```: Select 'True' if you want to use one of the sample signals provided. Select 'False' if you want to load costum data and enter your own data in the lines 31 and 32 of the file as described [Running the algorithm on your own data](##running-the-algorithm-on-you-own-data). 
-```singal_id```: Select an ID for one of the sample signals (compare XXX)
+```load_sample_data_```: Select 'True' if you want to use one of the sample signals provided. Select 'False' if you want to load costum data and enter your own data in the lines 31 and 32 of the file as described below.
+
+```singal_id```: Select an ID for one of the sample signals (compare Data)
 
 ### Kernel configuration for cost function 
 ```kernel```: specify the kernel as 'linear', 'gaussian' or 'laplace'
@@ -38,13 +39,17 @@ The main.py file is used to execute the algorithm and adjust its hyperparameters
 
 ### Penalty heuristic configuration
 ```pen-heur```: 'cost' for cost-heuristic introduced and described in section 4.2 of [1], or 'slope' for slope heuristic described in [3]
+
 ```alpha```: regularising penalty-factor. For adequate choice refer to [1]
 
 ```n_cp_max```: maximum number of change-points considered
+
 ```D_min/D_max```: hyperparameter for slope-heuristic (compare [3])
 
+### Running the algorithm on your own data
+In case you want to run the algorithm on your own SCADA data, firstly follow the pre-processing procedure described described in detail [1], section 4.1. Then, insert your signal as a np.array() in line 31 of ```main.py``` into the ```ar_signal``` variable and the corresponding list with integers indicating true change-points into the ```lst_cp_true``` variable (line 32). Chose the desired hyperparameters as described above and run the script.
 
-## Run the script
+## Script output
 When you run the script, the initially selected signal is displayed as shown in the following pictures:
 
 ![Exemplary_image](https://github.com/sltzgs/KernelCPD_WindSCADA/blob/master/figures/plot_signal_0.png)
@@ -75,8 +80,7 @@ The ```data_samples.pkl``` in the src-folder contains a selection of 11 pre-proc
 | 10 | J | Gear Bearing Temperature | yes (1) | 11 |
 
 
-## Running the algorithm on your own data
-In case you want to run the algorithm on your own SCADA data, firstly follow the pre-processing procedure described described in detail [1], section 4.1. Then, insert your signal as a np.array() in line 30 of ```main.py``` into the ```ar_signal``` variable and the corresponding list with integers indicating true change-points into the ```lst_cp_true``` variable (line 31). Chose the desired hyperparameters as described above and run the script.
+
 
 ## Paper abstract
 
@@ -86,18 +90,11 @@ Analysis of data from wind turbine supervisory control and data acquisition (SCA
 
 [1] Letzgus, S.: Change-point detection in wind turbine SCADA data for robust condition monitoring with normal behaviour models, submitted to: Wind Energy Science, Special Issue: WESC 2019
         
-[2] https://ctruong.perso.math.cnrs.fr/ruptures-docs/build/html/index.html
-        Copyright (c) 2017, ENS Paris-Saclay, CNRS
-        All rights reserved.
+[2] https://ctruong.perso.math.cnrs.fr/ruptures-docs/build/html/index.html, Copyright (c) 2017, ENS Paris-Saclay, CNRS, All rights reserved.
 
-
+[3] Arlot, S., Celisse, A., and Harchaoui, Z.: A kernel multiple change-point algorithm via model selection, arXiv preprint arXiv:1202.3878,52016
 # License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GNU License - see the [LICENSE](LICENSE) file for details
 
-# Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
 
