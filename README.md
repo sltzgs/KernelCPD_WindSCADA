@@ -1,6 +1,6 @@
 # KernelCPD_WindSCADA
 
-Python implementation and supplementary material complementing the WES-submission: "Change-point detection in wind turbine SCADA data for robust condition monitoring with normal behaviour models". It contains code of all presented algorithms as well as samples of selected pre-processed SCADA signals.
+Python implementation and supplementary material complementing the WES-submission: "Change-point detection in wind turbine SCADA data for robust condition monitoring with normal behaviour models" [1]. The repository contains code of all presented algorithms as well as samples of selected pre-processed SCADA signals. It complements comprehension of the paper and allows reproduction of results using on a set of available data samples or your own pre-processed SCADA data. 
 
 If you would like to get in touch, please contact simon.letzgus@tu-berlin.de.
 
@@ -10,38 +10,24 @@ Analysis of data from wind turbine supervisory control and data acquisition (SCA
 
 ## Getting Started
 
+### Repo content explained
+The repo is structured as follows:
+- src: folder contains all code files
+	- main.py:		 main file that allows to run the complete algorithm and adjustments of its hyperparameters.
+	- classes.py:		 file contains a helper-class for the data sample import as well as the kernel cost function.
+	- penalty_heuristics.py: file contains implementation of slope-heuristic as described in [2] and the cost-heuristic [1].
+	- plot_cp:		 file contains function for visualising the cp-detection results.
+- figures: folder contains exemplary plots for illustration
+
 ### Installing
 
 This code is written in ```Python 3.7``` and requires the packages listed in ```requirements.txt``` Clone the repository to your local machine and directory of choice:
 ```git clone https://github.com/sltzgs/KernelCPD_WindSCADA.git```
 
-Say what the step will be
+Get started by navigating to your target directory. In the main.py-file you can chose the signal to be analysed as well as the hyperparameters of the algorithm. Execute the main.py-file to run the algorithm with the respective settings.
 
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running change-point detection on SCADA examples
-
-Explain how to run the automated tests for this system
-
-
-## Examples
-
-If you want to embed images, this is how you do it:
-
-![Exemplary_image](https://github.com/sltzgs/KernelCPD_WindSCADA/blob/master/figures/f1_1y_detail.png)
-
-## Data
-The ```data_samples.pkl``` in the src-folder contains a selection of 11 pre-processed SCADA signals. They represent all examplary cases used in the publication for visualising the algorithm's performance. The ```pkl```file contains a ```data_samples```-object which holds the SCADA signals and additional information to each siganl, both as ```pd.DataFrames```. 
+### Data
+The ```data_samples.pkl``` in the src-folder contains a selection of 11 pre-processed SCADA signals. The pre-processing procedure is described in detail [1], section 4.1. The signals represent all examplary cases used in [1] for visualising the algorithm's performance. The ```.pkl```file contains a ```data_samples```-object which holds the SCADA signals and additional information for each siganl, both as ```pd.DataFrames```. Namely, the following signals are included:
 
 | Signal ID | Turbine ID | Signal name | CP present | Figure |
 | --- | --- | --- | --- |--- |
@@ -57,25 +43,38 @@ The ```data_samples.pkl``` in the src-folder contains a selection of 11 pre-proc
 | 9 | I |Gear Oil Pressure | yes (1) | 8 |
 | 10 | J | Gear Bearing Temperature | yes (1) | 11 |
 
+### The main.py step-by-step
+
+Explain how to run the automated tests for this system
+
+
+## Result visualisation
+
+If you want to embed images, this is how you do it:
+
+![Exemplary_image](https://github.com/sltzgs/KernelCPD_WindSCADA/blob/master/figures/f1_1y_detail.png)
+
+
+
 ## Running change-point detection on your own data
 
 
 
-## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+# References
 
-## Authors
+[1] Letzgus, S.: Change-point detection in wind turbine SCADA data for robust condition monitoring with normal behaviour models, submitted to: Wind Energy Science, Special Issue: WESC 2019
+        
+[2] https://ctruong.perso.math.cnrs.fr/ruptures-docs/build/html/index.html
+        Copyright (c) 2017, ENS Paris-Saclay, CNRS
+        All rights reserved.
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
+# License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
+# Acknowledgments
 
 * Hat tip to anyone whose code was used
 * Inspiration
