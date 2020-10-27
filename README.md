@@ -1,6 +1,6 @@
 # KernelCPD_WindSCADA
 
-Python implementation and supplementary material complementing the WES-submission: "Change-point detection in wind turbine SCADA data for robust condition monitoring with normal behaviour models" [1]. The repository contains code of all presented algorithms as well as samples of selected 
+Python implementation and supplementary material complementing the Wind Energy Science publication: "Change-point detection in wind turbine SCADA data for robust condition monitoring with normal behaviour models" [1]. The repository contains code of all presented algorithms as well as samples of selected 
 essed SCADA signals. It complements comprehension of the paper and allows reproduction of results using on a set of available data samples or your own pre-processed SCADA data. 
 
 If you would like to get in touch, please contact simon.letzgus@tu-berlin.de.
@@ -89,7 +89,7 @@ Analysis of data from wind turbine supervisory control and data acquisition (SCA
 
 # References
 
-[1] Letzgus, S.: Change-point detection in wind turbine SCADA data for robust condition monitoring with normal behaviour models, submitted to: Wind Energy Science, Special Issue: WESC 2019
+[1] Letzgus, S.: Change-point detection in wind turbine SCADA data for robust condition monitoring with normal behaviour models, Wind Energ. Sci., 5, 1375–1397, https://doi.org/10.5194/wes-5-1375-2020, 2020
         
 [2] https://ctruong.perso.math.cnrs.fr/ruptures-docs/build/html/index.html, Copyright (c) 2017, ENS Paris-Saclay, CNRS, All rights reserved.
 
