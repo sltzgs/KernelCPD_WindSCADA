@@ -13,7 +13,7 @@ The repo is structured as follows:
 - src: folder contains all code files
 	- main.py:		 main file that allows to run the complete algorithm and adjustments of its hyperparameters.
 	- classes.py:		 file contains a helper-class for the data sample import as well as the kernel cost function, which represents an instance of the custom cost class within the ruptures-framework [2].
-	- penalty_heuristics.py: file contains implementation of slope-heuristic as described in [3] and the cost-heuristic [1].
+	- penalty_heuristics.py: file contains implementation of the slope-heuristic as described in [3] and the cost-heuristic [1].
 	- plot_cp:		 file contains function for visualising the cp-detection results.
 - figures: folder contains exemplary plots for illustration
 - requirements: txt-file listing package requirements
