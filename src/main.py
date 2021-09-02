@@ -22,7 +22,7 @@ dct_config = dict({# data intake settings
                    
                    # penalty heuristic configuration
                    'pen_heur': 'cost',  # 'cost', 'slope'
-                   'alpha': 150,  # opt range cost_heur ~150 / slope_heur ~12
+                   'alpha': 150,  # opt range cost_heur ~75-150 / slope_heur ~4-12
                    'n_cp_max': 10,  # maximum number of cps considered
                    'D_max': 10,  # max number of segments considered =<n_cp_max
                    'D_min': 6})  # min number of segments for slope heuristics
